@@ -103,7 +103,7 @@ def generate_prompts(
     if num_prompts is None:
         return generate_prompt_cross_product(all_prompts, all_negative_prompts)
 
-    return all_prompts, repeat_iterable_to_length(all_negative_prompts, num_prompts)
+    return all_prompts, repeat_iterable_to_length(all_negative_prompts, len(all_prompts))
 
 
 def generate_prompt_cross_product(

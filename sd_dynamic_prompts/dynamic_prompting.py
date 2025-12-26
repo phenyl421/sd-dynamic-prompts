@@ -544,6 +544,7 @@ class Script(scripts.Script):
                 original_negative_hr_prompt,
                 original_negative_prompt,
             )
+        logger.debug(f'{len(p.all_prompts)=} {len(p.all_negative_prompts)=} {len(p.all_seeds)=} {p.n_iter=}')
 
 
 callbacks.register_settings()  # Settings need to be registered early, see #754.
